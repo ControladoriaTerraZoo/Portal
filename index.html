@@ -202,7 +202,7 @@ header {
   font-size: 32px;
   font-weight: 600;
   color: #111;
-  padding: 40px 0 28px;
+  padding: 12px 0 16px;
 }
 /* ── MAIN ── */
 main {
@@ -210,7 +210,7 @@ main {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  padding: 52px 24px 80px;
+  padding: 20px 24px 80px;
 }
 
 .section-label {
@@ -234,16 +234,16 @@ main {
 /* ── CARDS GRID ── */
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin-bottom: 52px;
 }
 
 .card {
   background: #b2dfc4;
   border: none;
-  border-radius: 12px;
-  padding: 28px 24px;
+  border-radius: 8px;
+  padding: 14px 14px;
   text-decoration: none;
   color: #111;
   display: flex;
@@ -285,29 +285,29 @@ main {
 .card.em-breve:hover { transform: none; box-shadow: none; }
 
 .card-icon {
-  width: 44px; height: 44px;
-  border-radius: 10px;
+  width: 28px; height: 28px;
+  border-radius: 8px;
   background: rgba(255,255,255,0.6);
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 18px;
-  font-size: 20px;
+  margin-bottom: 9px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 .card-title {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: #1a2e1f;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .card-desc {
-  font-size: 13px;
+  font-size: 11px;
   color: #2d4a30;
-  line-height: 1.55;
+  line-height: 1.45;
   flex: 1;
 }
 .card-footer {
-  margin-top: 20px;
-  padding-top: 16px;
+  margin-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid rgba(27,94,32,0.2);
   display: flex;
   align-items: center;
@@ -397,6 +397,10 @@ footer {
 .footer-logo span { color: var(--v4); }
 .footer-info { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 1px; }
 
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 680px) {
   .cards { grid-template-columns: 1fr; }
   .tools { grid-template-columns: 1fr; }
@@ -428,30 +432,10 @@ footer {
 
   <div class="cards">
 
-    <a class="card" href="https://controladoriaterrazoo.github.io/Painel-de-Tarefas/">
-      <div class="card-icon">✅</div>
-      <div class="card-title">Gerenciador de Tarefas</div>
-      <div class="card-desc">Quadro estilo Trello para a equipe: tarefas, reuniões, anexos, relatórios de acompanhamento por responsável e arquivo.</div>
-      <div class="card-footer">
-        <span class="card-status status-ativo">Ativo</span>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
-
-    <a class="card" href="https://controladoriaterrazoo.github.io/Forecast-2026/">
-      <div class="card-icon">🎯</div>
-      <div class="card-title">Forecast 2026</div>
-      <div class="card-desc">Realizado acumulado + Orçado dos meses restantes = Total anual projetado. Por loja e região.</div>
-      <div class="card-footer">
-        <span class="card-status status-ativo">Ativo</span>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
-
-    <a class="card" href="https://controladoriaterrazoo.github.io/OnePage/">
-      <div class="card-icon">📊</div>
-      <div class="card-title">One Page</div>
-      <div class="card-desc">Resumo executivo consolidado: Receita Bruta, Lucro Bruto Ajustado, EBITDA e margens — por Consolidado, Varejo e Atacado, comparado com o mesmo período do ano anterior.</div>
+    <a class="card" href="https://controladoriaterrazoo.github.io/Analise-de-Desepesas/">
+      <div class="card-icon">📉</div>
+      <div class="card-title">Análise de Despesa</div>
+      <div class="card-desc">Painel de análise de despesas por categoria, loja e período, com comparativos e detalhamento de variações.</div>
       <div class="card-footer">
         <span class="card-status status-ativo">Ativo</span>
         <span class="card-arrow">→</span>
@@ -468,10 +452,30 @@ footer {
       </div>
     </a>
 
-    <a class="card" href="https://controladoriaterrazoo.github.io/Analise-de-Desepesas/">
-      <div class="card-icon">📉</div>
-      <div class="card-title">Análise de Despesa</div>
-      <div class="card-desc">Painel de análise de despesas por categoria, loja e período, com comparativos e detalhamento de variações.</div>
+    <a class="card" href="https://controladoriaterrazoo.github.io/Forecast-2026/">
+      <div class="card-icon">🎯</div>
+      <div class="card-title">Forecast 2026</div>
+      <div class="card-desc">Realizado acumulado + Orçado dos meses restantes = Total anual projetado. Por loja e região.</div>
+      <div class="card-footer">
+        <span class="card-status status-ativo">Ativo</span>
+        <span class="card-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://controladoriaterrazoo.github.io/Painel-de-Tarefas/">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Gerenciador de Tarefas</div>
+      <div class="card-desc">Quadro estilo Trello para a equipe: tarefas, reuniões, anexos, relatórios de acompanhamento por responsável e arquivo.</div>
+      <div class="card-footer">
+        <span class="card-status status-ativo">Ativo</span>
+        <span class="card-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://controladoriaterrazoo.github.io/OnePage/">
+      <div class="card-icon">📊</div>
+      <div class="card-title">One Page</div>
+      <div class="card-desc">Resumo executivo consolidado: Receita Bruta, Lucro Bruto Ajustado, EBITDA e margens — por Consolidado, Varejo e Atacado, comparado com o mesmo período do ano anterior.</div>
       <div class="card-footer">
         <span class="card-status status-ativo">Ativo</span>
         <span class="card-arrow">→</span>
